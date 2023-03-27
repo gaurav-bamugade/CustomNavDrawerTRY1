@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="#FFFFFF"
+        tools:context=".MainActivity"
+        >
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_navigation_appbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:visibility="gone"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/navigation_collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:background="@drawable/purplebackground"
+                app:contentScrim="#0e0d0e"
+                app:expandedTitleTextAppearance="@android:color/transparent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:background="#80E9EBEC"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <ImageButton
+                            android:id="@+id/back_button"
+                            android:layout_width="45sp"
+                            android:layout_height="45sp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_white_back_arrow" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/back_button"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="30dp"
+                                android:src="@drawable/ic_groups_white" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="70dp"
+                                android:src="@drawable/ic_groups_white" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="75dp"
+                                android:src="@drawable/ic_groups_white" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="70dp"
+                                android:src="@drawable/ic_groups_white" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="70dp"
+                                android:src="@drawable/ic_groups_white" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="70dp"
+                                android:src="@drawable/ic_logout_white" />
+
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/relativeLayout"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="#80E9EBEC"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginEnd="5dp"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="Choose From Below"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/choose_color_dialogue"
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/transparent_background">
+
+                            <RelativeLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <!--  <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="4dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="#472CA8" />-->
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="Navigation Background"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="45sp"
+                                    android:layout_height="6sp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:background="@drawable/small_dash_white"
+                                    tools:ignore="SmallSp" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/transparent_background">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <!--  <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="4dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="#472CA8" />-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="Messages"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="45sp"
+                                    android:layout_height="6sp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:background="@drawable/small_dash_white"
+                                    tools:ignore="SmallSp" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/transparent_background">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <!--  <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="4dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="#472CA8" />-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="Messages"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="45sp"
+                                    android:layout_height="6sp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:background="@drawable/small_dash_white"
+                                    tools:ignore="SmallSp" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/transparent_background">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <!--  <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="4dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="#472CA8" />-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="Messages"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="45sp"
+                                    android:layout_height="6sp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:background="@drawable/small_dash_white"
+                                    tools:ignore="SmallSp" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/transparent_background">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <!--  <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="4dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="#472CA8" />-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="Messages"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="45sp"
+                                    android:layout_height="6sp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:background="@drawable/small_dash_white"
+                                    tools:ignore="SmallSp" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/transparent_background">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <!--  <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="4dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="#472CA8" />-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="Messages"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="45sp"
+                                    android:layout_height="6sp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:background="@drawable/small_dash_white"
+                                    tools:ignore="SmallSp" />
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/product_details_nestedscrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.Toolbar
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:id="@+id/navigation_drawer"
+                                android:layout_width="30sp"
+                                android:layout_height="30sp"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_navigation_down_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="Messages"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+                    </androidx.appcompat.widget.Toolbar>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:hint="Search by name"
+                            android:padding="4dp"
+                            android:drawableStart="@drawable/ic_search_grey"
+                            android:background="@drawable/round_search"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+    <!--<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        tools:context=".MainActivity">-->
+    <!--   <include
+           android:id="@+id/include_layout"
+           android:layout_height="match_parent"
+           android:layout_width="match_parent"
+           layout="@layout/navigation_design"
+           android:visibility="gone">
+       </include>-->
+<!--
+</RelativeLayout>-->
